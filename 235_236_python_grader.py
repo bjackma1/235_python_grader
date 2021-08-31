@@ -10,7 +10,7 @@ class Student:
         self.path = path
         path_len = len(unzipped_folder)
         self.name = path[path_len:(path_len + path[path_len:].index("_"))]
-        self.notebook = ''
+        self.html_notebook = ''
         self.student_cells = []
 
     def remove_images(self):
@@ -43,13 +43,13 @@ class Student:
             output. """
         # each submission for a student is a div with an id of their name so that you can easily navigate to it from
         # the top
-        self.notebook += f'<div id={self.name}><h3>{self.name}</h3>'
+        self.html_notebook += f'<div id={self.name}><h3>{self.name}</h3>'
         for cell in self.student_cells:
             if cell['cell_type'] == 'markdown':
                 markdown = ''
                 for markdown_line in cell['source']:
                     markdown += markdown_line + '<br>'
-                self.notebook += f'''
+                self.html_notebook += f'''
                 <div class="markdown">
                     <str><em>Markdown for {self.name} </str></em><br>
                     {markdown}
@@ -65,7 +65,7 @@ class Student:
                         code_output += '<pre>' + code_line + '</pre>'
                 except IndexError as ie:
                     print(f'{ie} for {self.name}')
-                self.notebook += f'''
+                self.html_notebook += f'''
                 <div class="code">
                     <str><em>Code for {self.name} </str></em><br>
                     <code>{source_code}</code>
@@ -75,7 +75,7 @@ class Student:
                     <pre>{code_output}</pre>
                 </div>
                 '''
-        self.notebook += '</div>'
+        self.html_notebook += '</div>'
 
 
 # file location may vary
@@ -118,7 +118,7 @@ def create_final_html(student_list):
 
     # adding all html together
     for student in student_list:
-        final_html_list += student.notebook
+        final_html_list += student.html_notebook
 
     final_html_list += '</body></html>'
 
