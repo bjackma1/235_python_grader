@@ -86,18 +86,18 @@ def create_final_html(student_list):
 
     style_element = '''
     <style>
-        .code, .output { font-family:"Lucida Console", Monaco, monospace; font-size:15px; }
-        body        { font-size: 15px; background-color:black; color:white; }
-        .markdown   { border: solid #9b9459 5px; font-family:Arial; background-color:#474429; }
-        .output     { border: solid #4a6e82 5px; background-color:#293d47; }
-        .code       { border: solid #3f6e46 5px; background-color:#29472d; }
-        #name       { font-size: 40px; }
-        #buttonGrid { float: left }
-        button      { width: 200px; background-color: black; border: 2px solid black; background-color: "#e0d7ff" }
-        h1          { position:sticky; top:15px; }
-        div         { width: auto; padding: 5px; margin:5px; word-wrap: break-word; }
-        pre         { word-wrap: break-word; }
-        a           { color: white; }
+        .code, .output  { font-family:"Lucida Console", Monaco, monospace; font-size:15px; }
+        body            { font-size: 15px; background-color:#353535; color:white; }
+        .markdown       { border: solid #F88D63 5px; font-family:Arial; background-color:#F56329; }
+        .code           { border: solid #06D6A0 5px; background-color:#048B67; }
+        .output         { border: solid #15ADE0 5px; background-color:#1082A8; }
+        #name           { font-size: 40px; }
+        #buttonGrid     { float: left }
+        button          { width: 200px; background-color:#353535; border: none; background-color:"#353535" }
+        h1              { position: sticky; top: 15px; }
+        div             { width: auto; padding: 5px; margin:5px; word-wrap: break-word; }
+        pre             { word-wrap: break-word; }
+        a               { color: white; }
     </style>
     '''
 
