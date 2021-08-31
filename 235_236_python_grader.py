@@ -90,7 +90,7 @@ def create_final_html(student_list):
         body        { font-size: 15px; background-color:black; color:white; }
         .markdown   { border: solid #9b9459 5px; font-family:Arial; background-color:#474429; }
         .output     { border: solid #4a6e82 5px; background-color:#293d47; }
-        .code { border: solid #3f6e46 5px; background-color:#29472d; }
+        .code       { border: solid #3f6e46 5px; background-color:#29472d; }
         #name       { font-size: 40px; }
         #buttonGrid { float: left }
         button      { width: 200px; background-color: black; border: 2px solid black; background-color: "#e0d7ff" }
