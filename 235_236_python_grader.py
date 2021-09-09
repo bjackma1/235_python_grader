@@ -81,28 +81,28 @@ class Student:
 def create_final_html(student_list):
     """gets all of the html for the students and adds buttons to navigate to everything and styles it. tbh the colors
        are kinda ugly so you can change them if you want"""
-    final_html_list = ''
-
-    style_element = '''
-    <style>
-        .code, .output  { font-family:"Lucida Console", Monaco, monospace; font-size:15px; }
-        body            { font-size: 15px; background-color:#353535; color:white; }
-        .markdown       { border: solid #F88D63 5px; font-family:Arial; background-color:#F56329; }
-        .code           { border: solid #06D6A0 5px; background-color:#048B67; }
-        .output         { border: solid #15ADE0 5px; background-color:#1082A8; }
-        #name           { font-size: 40px; }
-        #buttonGrid     { float: left }
-        button          { width: 200px; background-color:#353535; border: none; background-color:"#353535" }
-        h1              { position: sticky; top: 15px; }
-        div             { width: auto; padding: 5px; margin:5px; word-wrap: break-word; }
-        pre             { word-wrap: break-word; }
-        a               { color: white; }
-    </style>
+    final_html_list = '''
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Python Homework</title>
+            <style>
+                .code, .output  { font-family:"Lucida Console", Monaco, monospace; font-size:15px; }
+                body            { font-size: 15px; background-color:#353535; color:white; }
+                .markdown       { border: solid #F88D63 5px; font-family:Arial; background-color:#F56329; }
+                .code           { border: solid #06D6A0 5px; background-color:#048B67; }
+                .output         { border: solid #15ADE0 5px; background-color:#1082A8; }
+                #name           { font-size: 40px; }
+                #buttonGrid     { float: left }
+                button          { width: 200px; background-color:#353535; border: none; background-color:"#353535" }
+                h1              { position: sticky; top: 15px; }
+                div             { width: auto; padding: 5px; margin:5px; word-wrap: break-word; }
+                pre             { word-wrap: break-word; }
+                a               { color: white; }
+            </style>
+        </head>
+        <body>
     '''
-
-    head_element = "<!DOCTYPE html><html><head><title>Python Homework</title>" + style_element + "</head><body>"
-
-    final_html_list += head_element
 
     # button list allows you to click on an id and be instantly directed
     # to that student's submission
