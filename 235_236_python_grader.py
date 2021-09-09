@@ -55,8 +55,7 @@ class Student:
                     {markdown}
                 </div>'''
             elif cell['cell_type'] == 'code':
-                source_code = ''
-                code_output = ''
+                source_code, code_output = ''
                 for source_line in cell['source']:
                     source_code += '<pre>' + source_line + '<pre>'
                 try:
