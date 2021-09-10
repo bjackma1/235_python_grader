@@ -62,6 +62,8 @@ class Student:
                     # if there is no output we have to account for that and not break the html
                     for code_line in cell['outputs'][0]['text']:
                         code_output += '<pre>' + code_line + '</pre>'
+                except KeyError as ke:
+                    print(f'{ke} for {self.name}')
                 except IndexError as ie:
                     print(f'{ie} for {self.name}')
                 self.html_notebook += f'''
