@@ -55,7 +55,8 @@ class Student:
                     {markdown}
                 </div>'''
             elif cell['cell_type'] == 'code':
-                source_code, code_output = ''
+                source_code = ''
+                code_output = ''
                 for source_line in cell['source']:
                     source_code += '<pre>' + source_line + '<pre>'
                 try:
@@ -131,7 +132,9 @@ def add_to_student_list(unzipped_folder_filepath):
     """creates a list of all student names and their corresponding Student() objects to be iterated over"""
     student_list = []
     for filename in os.listdir(unzipped_folder_filepath):
+        print(filename)
         path = unzipped_folder_filepath + filename
+        print(path)
         student = Student(path)
         student.remove_images()
         student.parse_json_to_html()
@@ -146,7 +149,9 @@ def main():
     )
 
     global unzipped_folder, output_filepath
-    unzipped_folder = input("Enter the path for the unzipped version of the folder: ") + "\\"
+    mac = input("Are you on a mac? (Y/N) ")
+    filechange = "/" if mac.casefold() == 'y' else "\\"
+    unzipped_folder = input("Enter the path for the unzipped version of the folder: ") + filechange
     output_filepath = input("Enter the path for the HTML file that you want to output: ")
     student_list = add_to_student_list(unzipped_folder)
     create_final_html(student_list)
